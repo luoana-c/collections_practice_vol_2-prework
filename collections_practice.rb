@@ -34,6 +34,7 @@ def remove_non_strings(array)
 end
 
 def count_elements(array)
+<<<<<<< HEAD
   new_hash = {}
   array.each do |element|
     if new_hash[element[:name]] != nil
@@ -89,4 +90,18 @@ def organize_schools(schools)
     
   return org_schools
 end
+=======
+  array.collect do |element|
+    if element[:count] == nil
+      element[:count] = array.count(element).to_i
+    end
+  end
+  return array
+end
+
+def merge_data(keys, data)
+  keys.join(data)
+  
+end  
+>>>>>>> 2053fdd3f3189406f3a94fa181da5c8ad8be09c5
   
